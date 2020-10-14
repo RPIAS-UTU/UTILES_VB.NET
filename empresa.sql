@@ -62,7 +62,7 @@ CREATE TABLE `articulos` (
   
 INSERT INTO `articulos` (`codigo`, `foto`, `descripcion`, `precio`, `fecha_fabricacion`) VALUES
 (5422312, '', 'Bolsa para Lavar Ropa de 50x60cm con Cierre', 80, '31/01/2020'),
-(5422313, '', 'Escurre Platos Metálico de 2 Niveles', 600, '12/03/20020'),
+(5422313, '', 'Escurre Platos Metálico de 2 Niveles', 600, '12/03/2020'),
 (5422314, '', 'Funda Protectora de Lavarropas Impermeable 58x62x85cm', 380, '11/02/2020'),
 (5422315, '', 'Toallitas Quita Esmalte de Uñas Ideal para Cartera', 70, '15/02/2020'),
 (5422316, '', 'Bolsa para Lavar Ropa de 50x60cm con Cierre', 80, '31/01/2020');
