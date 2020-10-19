@@ -31,6 +31,8 @@ INSERT INTO `empleado` (`cedula`, `nombre`, `sueldo_base`) VALUES
 (1124567, 'Richard Jose Perez Galeano', 23525.15),
 (2342345, 'Nubel Mario Sisneros Ramirez', 51622.03);
 
+ALTER TABLE `jornalero` AUTO_INCREMENT = 1;
+
 INSERT INTO `jornalero` ( `id_empleado`, `especialidad`, `horas_extras`) VALUES
 (1, 'Cañero', 20),
 (2, 'Tratorista', 22),
