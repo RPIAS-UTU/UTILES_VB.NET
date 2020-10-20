@@ -1,4 +1,3 @@
-
 DROP DATABASE IF EXISTS `empresa`;
 CREATE DATABASE IF NOT EXISTS `empresa` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `empresa`;
@@ -92,6 +91,29 @@ END$$
 DELIMITER ; 
 
 ################################################################################
+# SP_EmpleadosPorIDTipo
+################################################################################
+DROP procedure IF EXISTS `SP_EmpleadosPorIDTipo`;
+DELIMITER $$
+USE `empresa`$$
+CREATE PROCEDURE `SP_EmpleadosPorIDTipo` (
+ id int
+)
+
+BEGIN 
+ 
+SELECT 
+ P.cedula 
+,CONCAT(P.primer_nombre, " ", P.primer_apellido ) AS nombre
+,TE.tipo_empleado
+FROM empleados AS E
+INNER JOIN personas AS P ON P.id_persona = E.id_persona
+INNER JOIN tipos_empleados AS TE ON TE.id_tipo_empleado = E.id_tipo
+WHERE E.id_tipo = id;
+END$$
+DELIMITER ; 
+
+################################################################################
 # SP_Agregar_Persona
 ################################################################################
 DROP procedure IF EXISTS `SP_Agregar_Persona`;
@@ -135,5 +157,3 @@ SELECT MAX(id_persona) INTO id_ingresado FROM personas;
 
 END$$
 DELIMITER ; 
-
-
